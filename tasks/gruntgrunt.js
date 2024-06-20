@@ -29,7 +29,8 @@ module.exports = function (grunt) {
         var child = spawn(options.grunt, data.tasks, {
             stdio: 'inherit',
             cwd: cwd,
-            env: process.env
+            env: process.env,
+            shell: true
         });
 
         child.on('close', function (code) {
